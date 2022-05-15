@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passworder</title>
 
-    <script src="./index.js"></script>
+    <script defer src="./main.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
+<body>
+    <section class="main">
+        <div>
+            <h1 class="title">Generate Password</h1>
+        </div>
+
+        <div>
+            <div class="option">
+                <label for="length">Password Length: 4</label>
+                <input type="range" name="length" id="length" min="1" max="50" value="10" >
+            </div>
+
+            <div class="option">
+                <label for="symbols">Include Symbols </label>
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" name="symbols" id="symbols">
+            </div>
+
+            <div class="option">
+                <label for="numbers">Include Numbers </label>
+                <input class="form-checkbox h-5 w-5 text-blue-600" type="checkbox" name="numbers" id="numbers">
+            </div>
+
+            <div class="option">
+                <label for="letters">Include Letters</label>
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" name="" id="letters">
+            </div>
+
+            <button class="btn" id="generator">GENERATE PASSWORD</button>
+        </div>
+    </section>
 </body>
+
 </html>
